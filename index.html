@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>フォームテスト</h1>
+  <form id="myForm">
+    <label for="name">名前:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="email">メールアドレス:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+    <input type="button" value="送信" onclick="submitForm()">
+  </form>
+  <script>
+    function submitForm() {
+      google.script.run.processForm(document.getElementById("myForm"));
+      document.getElementById("myForm").reset();
+    }
+  </script>
+</body>
+</html>
